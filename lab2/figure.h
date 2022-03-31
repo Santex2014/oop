@@ -14,3 +14,4 @@ protected:
     Point c;
     Point d;
 };
+

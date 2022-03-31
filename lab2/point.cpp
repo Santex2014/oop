@@ -26,33 +26,12 @@ double Point::getY()
     return y_;
 }
 
-void Point::setX(double a)
-{
-    x_ = a;
-}
-
-void Point::setY(double a)
-{
-    y_ = a;
-}
-
 std::istream& operator>>(std::istream& is, Point& p) {
     is >> p.x_ >> p.y_;
     return is;
 }
 
-std::ostream& operator<<(std::ostream& os,const Point& p) {
+std::ostream& operator<<(std::ostream& os, Point& p) {
     os << "(" << p.x_ << ", " << p.y_ << ")";
     return os;
-}
-
-bool operator== (Point& p1, Point& p2)
-{
-    return (p1.getX() == p2.getY() &&
-        p1.getY() == p2.getY());
-}
-
-bool operator!= (Point& p1, Point& p2)
-{
-    return !(p1 == p2);
 }
